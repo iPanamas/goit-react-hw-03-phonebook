@@ -12,12 +12,10 @@ class App extends Component {
 
   componentDidMount() {
     const contacts = localStorage.getItem('contacts');
-    const parseContacts = JSON.parse(contacts);
+    const parsedContacts = JSON.parse(contacts);
 
-    if (parseContacts) {
-      this.setState({
-        contacts: parseContacts,
-      });
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
     }
   }
 
